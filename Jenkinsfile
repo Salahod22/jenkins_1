@@ -3,22 +3,22 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/Salahod22/jenkins_1.git'
+                git branch: 'main', url: 'https://github.com/Salahod22/jenkins_1.git'
             }
         }
         stage('Build') {
             steps {
-                sh 'echo "Building the project..."'
+                echo 'Building...'
             }
         }
         stage('Test') {
             steps {
-                sh 'echo "Running tests..."'
+                echo 'Testing...'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'echo "Deploying the application..."'
+                echo 'Deploying...'
             }
         }
     }
